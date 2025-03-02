@@ -1,0 +1,716 @@
+@font-face {
+    font-family: futura;
+    src: url(Futura-Bold.ttf);
+}
+
+@font-face {
+    font-family: futura-light;
+    src: url(FuturaCyrillicLight.ttf);
+}
+
+/* @font-face {
+    font-family: font;
+    src: url(/LandingPage/NeueMachina-Light.otf);
+} */
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: futura;
+    color: rgb(0, 0, 0);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+#nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    /* background-color: RED; */
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: futura-light;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0 20px
+}
+
+#nav-part2 #links a {
+    color: #050505;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* letter-spacing: 0.15em; */
+
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+#nav-part2 #links a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #010101;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#nav-part2 #links a:hover:after {
+    opacity: 50%;
+    width: 100%;
+    left: 0;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#page1 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1.3vw;
+    padding-top: 19vh;
+    margin-top: 90px;
+}
+
+#page1 h1 {
+    font-size: 16vw;
+    text-transform: uppercase;
+    line-height: 13.5vw;
+    letter-spacing: -8px;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 2.9vw 2.2vw;
+    background-color: black;
+    color: white;
+    font-size: 1.3vw;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+.bottom-part h1 {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 58px;
+    line-height: 1em;
+    font-family: futura;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-top: 30vh;
+    margin-bottom: 25px;
+}
+
+.bottom-part p {
+    font-family: futura-light;
+    text-align: center;
+    font-weight: 800;
+}
+
+.bottom-part h5 {
+    margin-top: 20px;
+    text-align: center;
+    font-family: futura-light;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1.4vw;
+    justify-content: space-between;
+}
+
+#page2 .element {
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .element img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .element .dets {
+    height: 40px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: palegoldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    font-family: font;
+    letter-spacing: 0.06em;
+    line-height: 0.9em;
+    font-weight: 400;
+}
+
+#page2 .element .dets h4 {
+    text-transform: uppercase;
+    font-size: 2vh;
+    font-weight: 100;
+}
+
+#page2 .element .dets h5 {
+    text-transform: uppercase;
+    font-size: 2vh;
+    font-weight: 400;
+}
+
+#page2 .element .dets:hover {
+    cursor: pointer;
+
+}
+
+
+.go2549202153 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    margin: 0 10px;
+}
+
+.go2549202153 h5 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-family: futura-light;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.go3163104019 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    height: 2px;
+    background: black;
+}
+
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.child {
+    height: 54vh;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.child img {
+    height: 100%;
+}
+
+.child #child1:hover {
+    cursor: pointer;
+}
+
+#page3 .content h4{
+    text-align: center;
+    font-size: 12px;
+    font-family: futura-light;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.middle-part{
+    min-height: 100vh;
+    width: 100%; 
+    margin-top: 30px;
+}
+.middle-part .horizental-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.middle-part .horizental-btns button{
+    border-style: hidden;
+    background: transparent;
+}
+.horizental-btns .go532121862{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 24px;
+    background: transparent;
+    transition: black 0.3sease-out;
+}
+.go1368465217 span {
+    opacity: 1;
+    transition: opacity 0.2sease-out;
+    display: block;
+    max-width: 10em;
+    font-weight: 300;
+}
+.go1368465217 {
+    font-size: 24px;
+    line-height: 1em;
+    text-align: left;
+}
+.go239534344 {
+    position: relative;
+    top: 0px;
+    opacity: 0;
+}
+.middle-part .text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.middle-part .text h1{
+    width: 80%;
+    text-align: center;
+    font-size: 65px;
+    line-height: 1em;
+    font-family: futura;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-top: 8vh;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.middle-part .text button{
+    background-color: #000000;
+    color: white;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 20px 80px;
+    margin-top: 20px;
+    font-family: futura-light;
+    font-weight: 600;
+}
+.middle-part .text button:hover{
+    cursor: pointer;
+    color: rgb(210, 204, 204);
+}
+.middle-part .text h5{
+    margin-top: 30px;
+    font-family: futura-light;
+    font-size: 15PX;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Responsiveness */
+@media (max-width: 600px) {
+
+    #nav {
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    #nav #nav-part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #links {
+        padding: 10px;
+        display: none;
+    }
+
+    #nav-part1 {
+        height: 67px;
+        overflow: hidden;
+    }
+
+    #nav-part1 svg {
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+
+    #nav #twogoodlogo {
+        height: 40px;
+        margin-left: -20px;
+    }
+
+    #icons {
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #F7F7F7;
+    }
+
+    #nav-part2 #icons i {
+        font-size: 15px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+
+    #page1 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1 {
+        font-size: 15.5vw;
+        text-transform: uppercase;
+        line-height: 14vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    #video-container #play {
+        padding: 9.5vw 7.2vw;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #page2 .element {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #page2 .element .dets {
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: palegoldenrod;
+    }
+
+    #page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        height: 54vh;
+        width: 88vw;
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child img {
+        height: 100%;
+    }
+
+
+}
+
+/* ---------------------------------- Code For Footer --------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+
+
+.go2549202153 {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: -4px;
+}
+
+.go2549202153 span {
+    grid-column: span 1;
+    font-size: 12px;
+    font-family: futura-light;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.go2549202153 span:nth-child(2) {
+    text-align: right;
+}
+
+.go3163104019 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    height: 1px;
+    background: black;
+}
+
+
+
+.main-footer {
+    padding: 70px 0;
+    display: flex;
+    font-size: 12px;
+    font-family: futura-light;
+    font-weight: 700;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.main-footer h1 {
+    line-height: 117%;
+    color: black;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: futura-light;
+    font-weight: 700;
+}
+
+.main-footer h2 {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: futura-light;
+    font-weight: 700;
+}
+
+.main-footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    border-top: 1px solid #000000;
+    font-size: 17px;
+    padding: 15px 5px;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-family: futura-light;
+    font-weight: 500;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.logoinfo p {
+    color: black;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.contact-details li a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-details .fa {
+    color: black;
+    margin-right: 10px;
+}
+
+.sociallogos {
+    padding: 20px 0;
+}
+
+.sociallogos .logobox a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.com ul li {
+    padding: 5px 0;
+}
+
+@media only screen and (max-width: 749px) {
+    .main-footer {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .sociallogos {
+        padding: 20px 0;
+    }
+
+    .com {
+        padding: 20px 0;
+    }
+
+}
