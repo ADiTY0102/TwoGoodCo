@@ -198,25 +198,6 @@ body {
     text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #page2 {
     min-height: 100vh;
     width: 100%;
@@ -560,11 +541,10 @@ body {
 
 }
 
+
+
 /* ---------------------------------- Code For Footer --------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-
-
 
 .go2549202153 {
     grid-column: 1 / -1;
